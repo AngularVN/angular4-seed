@@ -1,13 +1,12 @@
 <html>
-
 <head>
   <title>Angular2 with TypeScript and Gulp</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="css/app.css" />
+  <link id="theme" rel="stylesheet" href="css/cerulean.css" />
   <style type="text/css">
   .loading { width: 128px; height: 129px; background: url('data:image/svg+xml;utf8,<svg width="128" height="129" xmlns="http://www.w3.org/2000/svg"> <g><title>background</title><rect fill="#00bf00" id="canvas_background" height="131" width="130" y="-1" x="-1"/><g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid"><rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/></g> </g> <g><title>Layer 1</title><ellipse ry="52" rx="52" id="svg_1" cy="64" cx="67" stroke-width="0" fill="#fff"/><ellipse stroke="null" ry="31" rx="25" id="svg_3" cy="64" cx="54" stroke-opacity="null" stroke-width="0" fill="#00bf00"/><rect id="svg_2" height="100" width="36" y="14" x="14" fill-opacity="null" stroke-width="0" fill="#ffffff"/><rect stroke="null" id="svg_6" height="10" width="55" y="12" x="14" stroke-width="0" fill="#ffffff"/><rect id="svg_7" height="11" width="55" y="105" x="14" stroke-width="0" fill="#ffffff"/><rect id="svg_8" height="62" width="7" y="34" x="11" stroke-width="0" fill="#00bf00"/> </g></svg>'); margin: 100px auto; -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out; animation: sk-rotateplane 1.2s infinite ease-in-out; } @-webkit-keyframes sk-rotateplane { 0% { -webkit-transform: perspective(120px) } 50% { -webkit-transform: perspective(120px) rotateY(180deg) } 100% { -webkit-transform: perspective(120px) rotateY(180deg) rotateX(180deg) } } @keyframes sk-rotateplane { 0% { transform: perspective(120px) rotateX(0deg) rotateY(0deg); -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg) } 50% { transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg); -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg) } 100% { transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg); -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg); } }
   </style>
-  <script type="text/javascript" src="js/shims.js"></script>
+  <script type="text/javascript" src="js/vendor.js"></script>
 </head>
 <!-- 3. Display the application -->
 
@@ -16,5 +15,5 @@
     <div class="loading"></div>
   </app-root>
 </body>
-<--bundleTpl-->
+<script type="text/javascript" src="js/bundle.js"></script>
 </html>

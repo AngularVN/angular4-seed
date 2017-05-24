@@ -1,0 +1,60 @@
+@header-height: @navbar-height; // top header
+@header-background-color: #fff;
+@sidebar-width: 220px;
+@state-default-border: #ddd;
+.app {
+  position: relative;
+  min-height: 100%; // important!
+  height: 100%; // important!
+  overflow: hidden;
+  .app-aside {
+    z-index: 21;
+    position: absolute;
+    overflow-y: auto;
+    bottom: 0;
+    padding: 0;
+    top: @header-height;
+    left: -@sidebar-width;
+    width: @sidebar-width;
+    background-color: @gray-dark;
+    -webkit-overflow-scrolling: touch;
+    @media (min-width:@screen-sm) {
+      left: 0;
+    }
+    ul {
+      padding-left: 0;
+      list-style: none;
+      li {
+        &.active {
+          background-color: @gray-dark;
+        }
+      }
+    }
+  }
+  .app-wrapper {
+    position: relative;
+    min-height: 100%; // important!
+    .app-content {
+      position: absolute;
+      top: @header-height;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      left: 0;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      // .transition(left .3s ease-in-out);
+      .page {
+        padding: @padding-small-vertical @padding-small-horizontal;
+      }
+      @media (min-width: @screen-sm) {
+        top: @header-height;
+        width: auto;
+        left: @sidebar-width;
+      }
+      // !important, avoid flikering for all pages.
+      // .transition(left .25s ease-in-out);
+      .transition(none);
+    }
+  }
+}

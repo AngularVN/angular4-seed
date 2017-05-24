@@ -2,7 +2,7 @@ import { Component, ChangeDetectionStrategy, } from '@angular/core';
 
 @Component({
   selector: 'app-components',
-  templateUrl: './app/pages/ui/components.html',
+  templateUrl: './app/ui/components.html',
   changeDetection: ChangeDetectionStrategy.OnPush // require by tooltip
 })
 

@@ -1,15 +1,20 @@
 System.config({
-  defaultExtension: 'js',
+  // defaultExtension: 'js',
+  //use typescript for compilation
+  transpiler: 'typescript',
+  //typescript compiler options
+  typescriptOptions: {
+    emitDecoratorMetadata: true
+  },
   paths: {
     // paths serve as alias
-    'npm:': 'node_modules/'
+    'npm:': './node_modules/'
   },
   // map tells the System loader where to look for things
   map: {
     // our app is within the app folder
-    app: '.tmp',
-
-    // angular bundles
+    app: './src/app',
+      // angular bundles
     '@angular/core': 'npm:@angular/core/bundles/core.umd.js',
     '@angular/common': 'npm:@angular/common/bundles/common.umd.js',
     '@angular/compiler': 'npm:@angular/compiler/bundles/compiler.umd.js',
@@ -21,19 +26,20 @@ System.config({
     '@angular/upgrade': 'npm:@angular/upgrade/bundles/upgrade.umd.js',
     "@angular/core/src/facade/lang": "npm:@angular/core/src/facade/lang.js",
     // other libraries
-    'rxjs': 'npm:rxjs',
+    '@ngx-translate/core': 'npm:@ngx-translate/core/bundles/core.umd.js',
+    '@ngx-translate/http-loader': 'npm:@ngx-translate/http-loader/bundles/http-loader.umd.js',
     'angular2-in-memory-web-api': 'npm:angular2-in-memory-web-api',
 
+    'rxjs': 'npm:rxjs',
     'moment': 'npm:moment/moment.js',
-    'md5': 'npm:md5/md5.js',
+    'node-md5': 'npm:node-md5/index.js',
     'ngx-bootstrap': 'npm:ngx-bootstrap'
-
   },
   // packages tells the System loader how to load when no filename and/or no extension
   packages: {
-    app: { main: './main.js', defaultExtension: 'js' },
+    app: { main: './main.ts', defaultExtension: 'ts' },
     rxjs: { defaultExtension: 'js' },
-    'ngx-bootstrap': { defaultExtension: 'js' },
+    'ngx-bootstrap': { format: 'cjs', main: 'bundles/ngx-bootstrap.umd.js', defaultExtension: 'js' },
     'angular2-in-memory-web-api': { main: './index.js', defaultExtension: 'js' }
   }
 });

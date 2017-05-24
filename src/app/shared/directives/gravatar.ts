@@ -3,7 +3,7 @@
 Usage : <img gravatar [email]="user.email" [size]="16">
 */
 import { Directive, ElementRef, Input } from '@angular/core';
-let md5 = require('md5');
+import md5 = require("node-md5");
 
 @Directive({
   selector: '[gravatar]'

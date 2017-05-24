@@ -1,8 +1,12 @@
-.c9
-.tmp
+.c9/
+.tmp/
+.publish/
+dist/
+src/js/
+src/fonts/
+typings/
+node_modules/
 npm-debug.log
-node_modules
-dist
-typings
 appsettings.yml
 src/app/appsettings.ts
+

@@ -1,0 +1,39 @@
+{
+  "name": "angular4-typescript-gulp",
+  "version": "1.0.0",
+  "description": "Angular2 with TypeScript and Gulp",
+  "private": false,
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AngularVN/angular4-seed.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AngularVN/angular4-seed/issues"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.15.2"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=4",
+    "npm": ">=3"
+  },
+  "keywords": [
+    "gulp",
+    "config",
+    "constant",
+    "angular4 typescript",
+    "angular4 config",
+    "angular4 configuration",
+    "typescript",
+    "ng2",
+    "ng4",
+    "ngx",
+    "gulpfriendly",
+    "gulpplugin"
+  ]
+}

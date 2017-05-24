@@ -3,6 +3,7 @@ import { HttpModule } from '@angular/http';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
 
 import { SharedModule } from './shared/shared.module';
 import { LayoutModule } from './layout/layout.module';
@@ -13,18 +14,18 @@ import { AppComponent } from './app.component';
 import { routing, appRoutingProviders } from './app.routing';
 
 
-import { AboutComponent } from './about/components/about';
+import { AboutComponent } from './about/component';
 // import { PageError404Component } from './pages/common/error/error404';
 
 
 
 
-// // UI
-// import { ButtonsComponent } from './pages/ui/buttons';
-// import { IconsComponent } from './pages/ui/icons';
-// import { GridsComponent } from './pages/ui/grids';
-// import { TypographyComponent } from './pages/ui/typography';
-// import { ComponentsComponent } from './pages/ui/components';
+// UI
+import { ButtonsComponent } from './ui/buttons';
+import { IconsComponent } from './ui/icons';
+import { GridsComponent } from './ui/grids';
+import { TypographyComponent } from './ui/typography';
+import { ComponentsComponent } from './ui/components';
 // // TABLES
 // import { StaticTableComponent } from './pages/tables/static';
 // import { DynamicTableComponent } from './pages/tables/dynamic';
@@ -37,6 +38,7 @@ import { AboutComponent } from './about/components/about';
     ReactiveFormsModule,
     FormsModule,
     HttpModule,
+    RouterModule,
     routing,
 
     SharedModule,
@@ -47,12 +49,12 @@ import { AboutComponent } from './about/components/about';
     AboutComponent,
     // PageError404Component,
 
-    // // UI
-    // GridsComponent,
-    // ComponentsComponent,
-    // IconsComponent,
-    // ButtonsComponent,
-    // TypographyComponent,
+    // UI
+    GridsComponent,
+    ComponentsComponent,
+    IconsComponent,
+    ButtonsComponent,
+    TypographyComponent,
     // // TABLES
     // StaticTableComponent,
     // DynamicTableComponent,

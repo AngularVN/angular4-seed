@@ -1,0 +1,52 @@
+<div class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <!-- <button class="navbar-toggle left" type="button" data-toggle="collapse" data-target="#navbar-main">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button> -->
+      <button class="navbar-toggle" type="button" (click)="isCollapsed = !isCollapsed">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="#/" class="navbar-brand">{{ setting.app.description }}</a>
+    </div>
+    <div class="navbar-collapse collapse" [collapse]="!isCollapsed">
+      <ul class="nav navbar-nav">
+        <li class="dropdown" dropdown>
+          <a class="dropdown-toggle" dropdownToggle>Themes <span class="caret"></span></a>
+          <ul *dropdownMenu class="dropdown-menu" role="menu">
+            <li><a (click)="changeTheme('cerulean')">Cerulean</a></li>
+            <li><a (click)="changeTheme('cosmo')">Cosmo</a></li>
+            <li><a (click)="changeTheme('cyborg')">Cyborg</a></li>
+            <li><a (click)="changeTheme('darkly')">Darkly</a></li>
+            <li><a (click)="changeTheme('flatly')">Flatly</a></li>
+            <li><a (click)="changeTheme('journal')">Journal</a></li>
+            <li><a (click)="changeTheme('lumen')">Lumen</a></li>
+            <li><a (click)="changeTheme('paper')">Paper</a></li>
+            <li><a (click)="changeTheme('readable')">Readable</a></li>
+            <li><a (click)="changeTheme('sandstone')">Sandstone</a></li>
+            <li><a (click)="changeTheme('simplex')">Simplex</a></li>
+            <li><a (click)="changeTheme('slate')">Slate</a></li>
+            <li><a (click)="changeTheme('spacelab')">Spacelab</a></li>
+            <li><a (click)="changeTheme('superhero')">Superhero</a></li>
+            <li><a (click)="changeTheme('united')">United</a></li>
+            <li><a (click)="changeTheme('yeti')">Yeti</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#/help/">Help</a>
+        </li>
+        <li>
+          <a href="#/blog">Blog</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="https://github.com/angularvn/" target="_blank">Built With AngularVN</a></li>
+        <li><a href="https://github.com/leduong" target="_blank">Le Duong</a></li>
+      </ul>
+    </div>
+  </div>
+</div>

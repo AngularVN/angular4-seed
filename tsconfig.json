@@ -2,7 +2,7 @@
   "compilerOptions": {
     "outDir": ".tmp",
     "target": "es5",
-    "module": "system",
+    "module": "commonjs",
     "moduleResolution": "node",
     "sourceMap": true,
     "emitDecoratorMetadata": true,
@@ -13,6 +13,7 @@
   "exclude": [
     "gulpfile.ts",
     ".tmp",
+    "dist",
     "node_modules"
   ]
 }

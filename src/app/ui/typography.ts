@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-typography',
-  templateUrl: './app/pages/ui/typography.html',
+  templateUrl: './app/ui/typography.html',
 })
 
 export class TypographyComponent {}
