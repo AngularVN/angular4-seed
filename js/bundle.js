@@ -27230,7 +27230,7 @@ var require = this.require, exports = this.exports, module = this.module;
     Object.defineProperty(exports, '__esModule', { value: true });
 });
 
-$__System.registerDynamic("10", ["c", "11"], true, function ($__require, exports, module) {
+$__System.registerDynamic("10", ["c", "f", "11"], true, function ($__require, exports, module) {
     "use strict";
 
     var global = this || self,
@@ -27245,20 +27245,30 @@ $__System.registerDynamic("10", ["c", "11"], true, function ($__require, exports
     var __metadata = exports && exports.__metadata || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
+    var __param = exports && exports.__param || function (paramIndex, decorator) {
+        return function (target, key) {
+            decorator(target, key, paramIndex);
+        };
+    };
     Object.defineProperty(exports, "__esModule", { value: true });
     var core_1 = $__require("c");
+    var platform_browser_1 = $__require("f");
     var setting_1 = $__require("11");
     var HeaderComponent = function () {
-        function HeaderComponent(setting) {
+        function HeaderComponent(document, setting) {
+            this.document = document;
             this.setting = setting;
         }
+        HeaderComponent.prototype.changeTheme = function (theme) {
+            this.document.getElementById('theme').setAttribute('href', ['css/', theme, '.css'].join(''));
+        };
         return HeaderComponent;
     }();
     HeaderComponent = __decorate([core_1.Component({
         selector: 'app-header',
         providers: [setting_1.SettingService],
         templateUrl: './app/layout/header/template.html'
-    }), __metadata("design:paramtypes", [setting_1.SettingService])], HeaderComponent);
+    }), __param(0, core_1.Inject(platform_browser_1.DOCUMENT)), __metadata("design:paramtypes", [Object, setting_1.SettingService])], HeaderComponent);
     exports.HeaderComponent = HeaderComponent;
 });
 $__System.registerDynamic("12", ["c", "11"], true, function ($__require, exports, module) {
