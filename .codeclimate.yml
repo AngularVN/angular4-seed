@@ -3,3 +3,6 @@ exclude_paths:
 - "spec/"
 - "systemjs.*.js"
 - "gulpfile.js"
+engines:
+  tslint:
+    enabled: true

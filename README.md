@@ -1,7 +1,7 @@
 # Angular4 with TypeScript and Gulp
 
 [![Paypal](https://img.shields.io/badge/donate-paypal-blue.svg)](https://goo.gl/mgesnb)
-[![Gratipay Team](https://img.shields.io/gratipay/Angular-VN/shields.svg)](https://gratipay.com/Angular-VN)
+[![Gratipay Team](https://img.shields.io/badge/give-a%20cup%20of%20coffee-b35900.svg)](https://gratipay.com/Angular-VN)
 
 [![Build Status](https://travis-ci.org/AngularVN/angular4-seed.svg?branch=master)](https://travis-ci.org/AngularVN/angular4-seed)
 [![Code Climate](https://codeclimate.com/github/AngularVN/angular4-seed/badges/gpa.svg)](https://codeclimate.com/github/AngularVN/angular4-seed)
@@ -69,8 +69,18 @@ npm run clean
 npm run build
 npm start
 ```
+## Docker   
 
-## deploy on Cloud 9
+[Docker Hub](https://hub.docker.com/r/angularvn/angular4-seed/)       
+
+### Run from Docker Hub
+```bash
+docker pull angularvn/angular4-seed
+docker run --rm --name angularvn -p 3000:3000  angularvn/angular4-seed
+```
+
+## Deploy on Cloud 9
+(https://ide.c9.io/leduong/angular4-seed)
 
 ```bash
 nvm install 6

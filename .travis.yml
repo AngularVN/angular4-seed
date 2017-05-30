@@ -13,8 +13,9 @@ cache:
 
 before_install: if [[ `npm -v` != 3* ]]; then npm i -g npm@3; fi
 after_script:
-  - npm run coveralls
+  - "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   - npm run build
 
 notifications:
   slack: leduong:8FHnajypcfOykiQS6Hn6QBB5
+repo_token: RowsKbZ85YsRTAjF5d50i4rkAd3FArlu8
