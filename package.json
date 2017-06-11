@@ -12,7 +12,7 @@
     "url": "https://github.com/AngularVN/angular4-seed/issues"
   },
   "scripts": {
-    "test": "./node_modules/.bin/gulp tslint; ./node_modules/.bin/jest --coverage",
+    "test": "./node_modules/.bin/gulp tslint",
     "clean": "./node_modules/.bin/gulp clean",
     "coveralls": "./node_modules/.bin/gulp coveralls",
     "compile": "./node_modules/.bin/gulp compile",

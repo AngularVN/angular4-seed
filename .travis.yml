@@ -13,7 +13,7 @@ cache:
 
 before_install: if [[ `npm -v` != 3* ]]; then npm i -g npm@3; fi
 after_script:
-  - "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
+  - npm run test
   - npm run build
 
 notifications:
