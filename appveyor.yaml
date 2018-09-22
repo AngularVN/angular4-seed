@@ -16,9 +16,9 @@ cache:
 
 install:
   - ps: Install-Product node $env:nodejs_version
-  - ps: npm install -g npm@3
-  
-build_script:  
+  - ps: npm install -g npm@6
+
+build_script:
   - ps: npm i
   - ps: npm run clean
   - ps: npm run build
@@ -29,7 +29,7 @@ test_script:
   - node --version
   - npm --version
 
-deploy_script:  
+deploy_script:
  - cd C:\projects\angular4
  - ps: docker build -f Dockerfile -t "angularvn/angular4-seed:nanoserver-$env:APPVEYOR_BUILD_NUMBER" .
  - ps: docker login -u="$env:DOCKER_USER" -p="$env:DOCKER_PASS"
@@ -37,4 +37,3 @@ deploy_script:
 
 #on_finish:
 #  - ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
-

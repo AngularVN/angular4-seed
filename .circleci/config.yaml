@@ -2,13 +2,13 @@ version: 2
 jobs:
   build:
     docker:
-      - image: ubuntu:16.04
+      - image: ubuntu:18.04
     working_directory: ~/
     environment:
       - NG2ENV : "Prod"
     steps:
       - checkout
-      - run: 
+      - run:
           name: Install curl and git
           command: |
             apt update
@@ -25,15 +25,15 @@ jobs:
             tar -xz -C /tmp -f /tmp/docker-$VER.tgz
             mv /tmp/docker/* /usr/bin
       - run:
-          name: Install NodeJS v6
+          name: Install NodeJS v8
           command: |
-            curl -sL https://deb.nodesource.com/setup_6.x | bash -
+            curl -sL https://deb.nodesource.com/setup_8.x | bash -
             apt update
             apt install -y nodejs
       - run:
           name: Build and bundle from source
           command: |
-            if [[ `npm -v` != 3* ]]; then npm i -g npm@3; fi
+            if [[ `npm -v` != 6* ]]; then npm i -g npm@6; fi
             npm i
             npm run rebuild
       - run:
@@ -41,8 +41,8 @@ jobs:
           command: |
             TAG=0.1.$CIRCLE_BUILD_NUM
             docker build -f Dockerfile -t angularvn/angular4-seed .
-            docker login -u $DOCKER_USER -p $DOCKER_PASS
-            docker push angularvn/angular4-seed
+          # docker login -u $DOCKER_USER -p $DOCKER_PASS
+          # docker push angularvn/angular4-seed
           # docker build -f docker/runtime.dockerfile -t angularvn/angular4-seed:$TAG .
           # docker push angularvn/angular4-seed:$TAG
       - save_cache:

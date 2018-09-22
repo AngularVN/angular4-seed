@@ -19,8 +19,8 @@ http://angularvn.github.io/angular4-seed/
 Prerequisites
 -------------
 
-- nodejs >= 4
-- npm >= 3
+- nodejs >= 8
+- npm >= 6
 
 Running
 -------
@@ -83,8 +83,8 @@ docker run --rm --name angularvn -p 3000:3000  angularvn/angular4-seed
 (https://ide.c9.io/leduong/angular4-seed)
 
 ```bash
-nvm install 6
-nvm alias default 6
+nvm install 8
+nvm alias default 8
 npm i
 npm run build
 npm run serve
